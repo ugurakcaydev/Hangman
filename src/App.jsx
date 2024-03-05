@@ -6,7 +6,7 @@ import KeywordContainer from "./components/KeywordContainer";
 import Popup from "./components/Popup";
 import countries from "./mock/countries";
 
-let randomItem = countries[0];
+let randomItem = countries[Math.floor(Math.random() * countries.length)];
 let selectedWord = randomItem.title.trim().toLowerCase();
 let selectedImg = randomItem.img;
 console.log({ selectedWord }, { selectedImg });
