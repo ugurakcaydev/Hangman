@@ -28,7 +28,9 @@ const Popup = ({
     checkWinOrLose(correctLetters, wrongLetters, healt, selectedWord) === "lose"
   ) {
     finalMessage = "Sanırım Kaybettin. 😕";
-    finalMessageRevealWord = `...aradığımız ülke : ${selectedWord} `;
+    finalMessageRevealWord = `- Aradığımız Ülke -  \n${selectedWord.toLocaleUpperCase(
+      "tr-TR"
+    )} `;
     playable = false;
   }
 
