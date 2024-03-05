@@ -51,13 +51,13 @@ function App() {
 
   return (
     <>
-      <div className="mainContainer relative min-w-[400px] h-full  ">
+      <div className="mainContainer relative  h-full  ">
         <img
           className="absolute top-0 left-0 h-full object-cover z-10 "
           src="/img/bg.jpg"
           alt=""
         />
-        <div className="relative w-full h-full flex flex-col items-stretch justify-center bg-white/10 z-20 px-5 py-14 gap-y-20 text-white ">
+        <div className="relative w-full h-full flex flex-col items-stretch justify-center bg-white/10 z-20 px-3 py-14 gap-y-20 text-white ">
           <Header
             wrongLetters={wrongLetters}
             healt={healt}

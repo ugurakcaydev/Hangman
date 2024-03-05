@@ -31,9 +31,10 @@ function Header({ healt, selectedImg }) {
         </svg>
       </div>
       <div
-        className={classNames("flex  items-center justify-center blur-md ", {
-          "!blur-sm": healt === 4,
-          "!blur-none": healt <= 3,
+        className={classNames("flex  items-center justify-center blur-lg ", {
+          "!blur-md": healt === 4,
+          "!blur-sm": healt === 3,
+          "!blur-none": healt <= 2,
         })}
       >
         <img
