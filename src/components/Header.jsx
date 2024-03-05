@@ -13,7 +13,7 @@ function Header({ healt, selectedImg }) {
           alt=""
         />
       </div>
-      <div className="flex-1 flex items-center gap-x-3">
+      <div className="flex-1 flex items-center gap-x-1">
         <Progress
           className="w-full rounded-md"
           hasStripe

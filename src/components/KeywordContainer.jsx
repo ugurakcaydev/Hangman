@@ -1,19 +1,6 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-function turkishToUpper(letter) {
-  const turkishChars = {
-    i: "İ",
-    ı: "I",
-    ğ: "Ğ",
-    ü: "Ü",
-    ş: "Ş",
-    ö: "Ö",
-    ç: "Ç",
-  };
-  return turkishChars[letter] || letter.toUpperCase();
-}
-
 function KeywordContainer({ onKeyPress, wrongLetters, correctLetters }) {
   const alphabet = "abcçdefghıijklmnoöprsştuüvyz";
   return (
@@ -25,16 +12,16 @@ function KeywordContainer({ onKeyPress, wrongLetters, correctLetters }) {
               "w-10 h-10 rounded-lg bg-white text-black font-serif",
               {
                 "!bg-black/50 text-red-500 pointer-events-none":
-                  wrongLetters.includes(letter.toLowerCase()),
+                  wrongLetters.includes(letter.toLocaleLowerCase("tr-TR")),
                 "!bg-black/50 !text-green-500 pointer-events-none":
-                  correctLetters.includes(letter.toLowerCase()),
+                  correctLetters.includes(letter.toLocaleLowerCase("tr-TR")),
               }
             )}
             key={index}
-            onClick={() => onKeyPress(letter.toLowerCase())}
+            onClick={() => onKeyPress(letter.toLocaleLowerCase("tr-TR"))}
             id={letter}
           >
-            {turkishToUpper(letter)}
+            {letter.toLocaleUpperCase("tr-TR")}
           </button>
         ))}
       </div>

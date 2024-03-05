@@ -6,10 +6,12 @@ import KeywordContainer from "./components/KeywordContainer";
 import Popup from "./components/Popup";
 import countries from "./mock/countries";
 
+
+
 let randomItem = countries[Math.floor(Math.random() * countries.length)];
-let selectedWord = randomItem.title.trim().toLowerCase();
+let selectedWord = randomItem.title.trim().toLocaleLowerCase("tr-TR")
 let selectedImg = randomItem.img;
-console.log({ selectedWord }, { selectedImg });
+
 function App() {
   const [healt, setHealt] = useState(5);
   const [playable, setPlayable] = useState(true);
@@ -43,7 +45,7 @@ function App() {
     setCorrectLetters([]);
     setWrongLetters([]);
     randomItem = countries[Math.floor(Math.random() * countries.length)];
-    selectedWord = randomItem.title.trim().toLowerCase();
+    selectedWord = randomItem.title.trim().toLocaleLowerCase("tr-TR");
     selectedImg = randomItem.img;
   }
 

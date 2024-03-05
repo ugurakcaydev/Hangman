@@ -12,7 +12,7 @@ export function checkWinOrLose(
   selectedWord
 ) {
   let status = "win";
-  const wordArray = selectedWord.trim().toLowerCase().split(" ");
+  const wordArray = selectedWord.trim().toLocaleLowerCase("tr-TR").split(" ");
 
   for (let word of wordArray) {
     for (let letter of word) {

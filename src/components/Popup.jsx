@@ -21,7 +21,7 @@ const Popup = ({
       finalMessage = "Tebrikler Kazandın 😃 ";
       finalMessageRevealWord = `as bayrakları assss trt trtrt tr tr auuu auuuu trtr auu tr as asa as `;
     } else {
-      finalMessage = "Tebrikler Kazandın 123123123😃";
+      finalMessage = "Tebrikler Kazandın😃";
     }
     playable = false;
   } else if (
