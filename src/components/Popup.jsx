@@ -14,11 +14,15 @@ const Popup = ({
   let finalMessageRevealWord = "";
   let playable = true;
 
-
   if (
     checkWinOrLose(correctLetters, wrongLetters, healt, selectedWord) === "win"
   ) {
-    finalMessage = "Tebrikler Kazandın 😃";
+    if (selectedWord === "türkiye") {
+      finalMessage = "Tebrikler Kazandın 😃 ";
+      finalMessageRevealWord = `as bayrakları assss trt trtrt tr tr auuu auuuu trtr auu tr as asa as `;
+    } else {
+      finalMessage = "Tebrikler Kazandın 123123123😃";
+    }
     playable = false;
   } else if (
     checkWinOrLose(correctLetters, wrongLetters, healt, selectedWord) === "lose"
@@ -42,14 +46,16 @@ const Popup = ({
             }
           )}
         >
-          <div>{finalMessage}</div>
-          <div>{finalMessageRevealWord}</div>
-          <button
-            className="border-green-500 text-green-500 px-3  py-1.5 border-2 rounded-md"
-            onClick={playAgain}
-          >
-            Tekrar Oyna
-          </button>
+          <div className="flex flex-col items-center justify-center flex-wrap max-w-[200px] gap-y-4 ">
+            <div className="text-lg">{finalMessage}</div>
+            <div className="text-lg text-center">{finalMessageRevealWord}</div>
+            <button
+              className="border-green-500 text-green-500 px-3  py-1.5 border-2 rounded-md"
+              onClick={playAgain}
+            >
+              Tekrar Oyna
+            </button>
+          </div>
         </div>
       )}
     </>

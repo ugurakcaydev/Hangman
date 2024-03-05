@@ -18,7 +18,7 @@ function KeywordContainer({ onKeyPress, wrongLetters, correctLetters }) {
   const alphabet = "abcçdefghıijklmnoöprsştuüvyz";
   return (
     <div className="z-20 text-white">
-      <div className="keyboard flex items-center justify-center flex-wrap max-w-[360px] gap-2">
+      <div className="keyboard flex items-center justify-center flex-wrap max-w-[360px] gap-2.5">
         {alphabet.split("").map((letter, index) => (
           <button
             className={classNames(

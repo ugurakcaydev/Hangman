@@ -1,10 +1,17 @@
 import { Progress } from "@chakra-ui/react";
 import PropTypes from "prop-types";
-function Header({ healt }) {
+function Header({ healt, selectedImg }) {
   return (
-    <div className="flex items-center justify-between z-20 px-6 ">
-      <div className="flex flex-1 text-2xl font-serif text-white">
+    <div className="flex items-center justify-between z-20 px-5">
+      <div className="flex flex-1  text-2xl font-serif text-white">
         Countries
+      </div>
+      <div className="flex flex-1 items-center justify-center ">
+        <img
+          className="w-10 h-10 object-contain"
+          src={`/img/${selectedImg}`}
+          alt=""
+        />
       </div>
       <div className="flex-1 flex items-center gap-x-3">
         <Progress
@@ -17,8 +24,9 @@ function Header({ healt }) {
           max={5}
           min={0}
         />
+
         <svg
-          className="w-10 h-10  text-red-500 "
+          className="w-10 h-10  text-red-500  "
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >
@@ -34,6 +42,7 @@ function Header({ healt }) {
 
 Header.propTypes = {
   healt: PropTypes.number.isRequired,
+  selectedImg: PropTypes.string,
 };
 
 export default Header;
