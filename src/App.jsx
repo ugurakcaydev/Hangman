@@ -57,7 +57,7 @@ function App() {
           src="/img/bg.jpg"
           alt=""
         />
-        <div className="relative w-full h-full flex flex-col items-stretch justify-between bg-white/10 z-20 px-5 py-20 gap-y-24 text-white ">
+        <div className="relative w-full h-full flex flex-col items-stretch justify-center bg-white/10 z-20 px-5 py-14 gap-y-20 text-white ">
           <Header
             wrongLetters={wrongLetters}
             healt={healt}
